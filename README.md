@@ -95,7 +95,61 @@ For Clubs:
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+User
+| Property | Type | Description |
+| ------------- | -------- | ------------|
+|username | String | unique id for user |
+|password | String | unique password for user |
+|profilePic | File | image for user profile |
+|dateJoined | DateTime | date the user joined |
+|clubsFollowed | Array | the clubs this user follows |
+|bio | String | user self-description 
+
+
+Club_User
+
+| Property      | Type     | Description |
+| ------------- | -------- | ------------|
+| clubname      | String   | unique id for the club (default field) |
+| password      | String   | unique password for the club |
+| image         | File     | image that user posts |
+| description       | String   | a description of the club |
+| followes | Array   | an array of the users who follow this club |
+| createdAt     | DateTime | date when post is created (default field) |
+
+
+Post
+
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+| rsvp_button     | boolean | a button that allows people to rsvp to an event |
+    
+
+Message
+
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the chat (default field) |
+   | sender        | Pointer to Sender| message sender |
+| recipient        | Pointer to recipient| message recipient |
+   | content       | String   | message 
+   | sentAt | DateTime | time message sent |
+   |read | boolean | whether or not message opened |
+
+
+### Networking
+
+
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]

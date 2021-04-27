@@ -50,13 +50,12 @@ A social media application for college-wide clubs and organizations.
    * User can log in to a student account
    * User can log in to a club account
 * Profile
+    * User profile including picture, name, bio
     * User can view the list of clubs they follow
     * Clubs can view the list of club members
-* Stream
+* Stream/Home
     * User can view a feed of posts from the clubs that they follow 
-* Detail
-    * User can view details of a specific post 
-* Chat (?)
+* Chat
     * User can message clubs they follow and vice versa
     * Clubs can message each other 
 * Post
@@ -67,33 +66,28 @@ A social media application for college-wide clubs and organizations.
 
 **Tab Navigation** (Tab to Screen)
 
-For users:
-* Stream/Feed
+* Stream/Home page
+* Search
+* Post
 * Profile
-
-
-For Clubs:
-* Post (for clubs)
 
 **Flow Navigation** (Screen to Screen)
 
-* Feed/Stream
-   * Profile [club]
-   * Chat 
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Stream/Home
+   * Profile
+* Search
+   * Proflile
+* Post
+* User Profile/ Club Pahe
+  * Chat
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+<img src="https://github.com/happyalpacas/codepath_project/blob/main/wireframe.jpg" width=600>
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
 
 User
@@ -147,7 +141,22 @@ Message
 
 ### Networking
 
-
+User interface:
+    List of network requests by screen:
+        -Stream/Home Screen
+            -(Read/GET) Query all posts by clubs the user follows
+            -(Create/POST) Create a new like on a post
+            -(Delete) Delete an existing like
+        -Search
+            -(Read/GET) Query all clubs and organizations
+        -Profile
+            -(Read/GET) Query logged in user object
+            -(Update/PUT) Update user profile image
+            -(Create/POST) Create new chat object
+        -Post
+            -(Create/POST) Create a new post object
+        -Chat
+            -(Create/POST) Create new mesage
 
 
 ### Networking

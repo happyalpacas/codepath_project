@@ -141,23 +141,20 @@ Message
 
 ### Networking
 
-User interface:
-    List of network requests by screen:
-        -Stream/Home Screen
-            -(Read/GET) Query all posts by clubs the user follows
-            -(Create/POST) Create a new like on a post
-            -(Delete) Delete an existing like
-        -Search
-            -(Read/GET) Query all clubs and organizations
-        -Profile
-            -(Read/GET) Query logged in user object
-            -(Update/PUT) Update user profile image
-            -(Create/POST) Create new chat object
-        -Post
-            -(Create/POST) Create a new post object
-        -Chat
-            -(Create/POST) Create new mesage
-
+* Stream/Home Screen
+    * (Read/GET) Query all posts by clubs the user follows
+    * (Create/POST) Create a new like on a post
+    * (Delete) Delete an existing like
+* Search
+    * (Read/GET) Query all clubs and organizations
+* Profile
+    * (Read/GET) Query logged in user object
+    * (Update/PUT) Update user profile image
+    * (Create/POST) Create new chat object
+* Post
+    * (Create/POST) Create a new post object
+* Chat
+    * (Create/POST) Create new mesage
 
 ### Networking
 - [Add list of network requests by screen ]

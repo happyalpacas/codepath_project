@@ -101,7 +101,7 @@ User
 |username | String | unique id for user |
 |password | String | unique password for user |
 |profilePic | File | image for user profile |
-|dateJoined | DateTime | date the user joined |
+|createdAt | DateTime | date the user joined |
 |clubsFollowed | Array | the clubs this user follows |
 |bio | String | user self-description 
 
@@ -115,7 +115,7 @@ Club_User
 | image         | File     | image that user posts |
 | description       | String   | a description of the club |
 | followes | Array   | an array of the users who follow this club |
-| createdAt     | DateTime | date when post is created (default field) |
+| createdAt     | DateTime | date when user joined |
 
 Post
 

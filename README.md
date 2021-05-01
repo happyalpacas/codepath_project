@@ -172,27 +172,27 @@ List of network requests by screen:
     ```
     * (Create/POST) Create a new like on a post
     ```swift
-    // Create the post
-ParseQuery<Post> query = ParseQuery.getQuery("post");
-// Retrieve the object by id
-query.getInBackground(currentUser, new GetCallback<Post>() {
-  public void done(Post post, ParseException e) {
+    
+    ParseQuery<Post> query = ParseQuery.getQuery("post");
+    // Retrieve the object by id
+    query.getInBackground(currentUser, new GetCallback<Post>() {
+      public void done(Post post, ParseException e) {
     if (e == null) {
       int likes = post.getLikesCount();
       likes++;
       post.put("likesCount", likes);
       post.saveInBackground();
-    }
-  }
-});
+        }
+      }
+    });
     ```
     * (Delete) Delete an existing like
     ```swift
-ParseQuery<Post> query = ParseQuery.getQuery("Post");
-ParseUser currentUser = ParseUser.get(currentUser);
-// Retrieve the object by id
-query.getInBackground(currentUser, new GetCallback<Post>() {
-  public void done(Post post, ParseException e) {
+    ParseQuery<Post> query = ParseQuery.getQuery("Post");
+    ParseUser currentUser = ParseUser.get(currentUser);
+    // Retrieve the object by id
+    query.getInBackground(currentUser, new GetCallback<Post>() {
+      public void done(Post post, ParseException e) {
     if (e == null) {
       // Now let's update it with some new data. In this case, only cheatMode and score
       // will get sent to your Parse Server. playerName hasn't changed.
@@ -230,18 +230,21 @@ query.getInBackground(currentUser, new GetCallback<Post>() {
     }
 ```
 * Profile
+
     * (Read/GET) Query logged in user object
+
+
     ```swift
     ParseQuery<User> query = ParseQuery.getQuery("User");
     query.getInBackground(currentUser, new GetCallback<ParseObject>() {
   public void done(User user, ParseException e) {
     if (e == null) {
-      Log.i(TAG, "Username: " + user.getUsername() + "Bio: " + user.getBio() + "Date joined: " + user.getDateJoined());
+      Log.i(TAG, "Username: " + user.getUsername() + "Bio: " +     user.getBio() + "Date joined: " + user.getDateJoined());
     } else {
       Log.e(TAG, "error");
     }
-  }
-});
+      }
+    });
     ```
     * (Update/PUT) Update user profile image
     ```swift

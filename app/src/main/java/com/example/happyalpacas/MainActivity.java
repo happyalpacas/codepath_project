@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-        //Trying git
     }
 
     private void logout() {

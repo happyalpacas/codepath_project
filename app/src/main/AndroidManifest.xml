@@ -3,21 +3,26 @@
     package="com.example.happyalpacas">
 
     <application
+        android:name=".ParseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Happyalpacas">
-        <activity android:name=".ClubActivity"></activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.Happyalpacas.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ClubActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
